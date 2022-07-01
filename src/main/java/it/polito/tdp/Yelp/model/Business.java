@@ -1,6 +1,10 @@
 package it.polito.tdp.Yelp.model;
 
 public class Business {
+	
+	//ATTRIBUTI:
+	//da copiare dalla tabella corrispondente in HeidiSQL
+	
 	private String businessId;
 	private String fullAddress;
 	private String active;
@@ -14,10 +18,16 @@ public class Business {
 	private String state;
 	private double stars;
 	
-	public Business(String businessId, String fullAddress, String active, String categories, String city,
-			int rewiewCout, String businessName, String neighborhoods, double latitude, double longitude, String state,
-			double stars) {
-		super();
+	
+	
+	//COSTRUTTORE:
+	//con tutti i campi della riga dalla tabella corrispondente in HeidiSQL
+	
+	public Business(String businessId, String fullAddress, String active, 
+					String categories, String city, int rewiewCout, 
+					String businessName, String neighborhoods, double latitude, 
+					double longitude, String state, double stars) {
+		
 		this.businessId = businessId;
 		this.fullAddress = fullAddress;
 		this.active = active;
@@ -32,6 +42,20 @@ public class Business {
 		this.stars = stars;
 	}
 
+	
+	
+	
+	//METODI:
+	
+	//Generare di default i metodi:
+	//- getter e setter 
+	//- hashCode() ed equals() *
+	//- toString()
+		
+	//*:
+	//hashCode() ed equals() della sola chiave primaria (businessId), 
+	//che identifica univocamente i business.
+	
 	public String getBusinessId() {
 		return businessId;
 	}
@@ -40,6 +64,7 @@ public class Business {
 		this.businessId = businessId;
 	}
 
+	
 	public String getFullAddress() {
 		return fullAddress;
 	}
@@ -48,6 +73,7 @@ public class Business {
 		this.fullAddress = fullAddress;
 	}
 
+	
 	public String getActive() {
 		return active;
 	}
@@ -56,6 +82,7 @@ public class Business {
 		this.active = active;
 	}
 
+	
 	public String getCategories() {
 		return categories;
 	}
@@ -64,6 +91,7 @@ public class Business {
 		this.categories = categories;
 	}
 
+	
 	public String getCity() {
 		return city;
 	}
@@ -72,6 +100,7 @@ public class Business {
 		this.city = city;
 	}
 
+	
 	public int getRewiewCout() {
 		return rewiewCout;
 	}
@@ -80,6 +109,7 @@ public class Business {
 		this.rewiewCout = rewiewCout;
 	}
 
+	
 	public String getBusinessName() {
 		return businessName;
 	}
@@ -88,6 +118,7 @@ public class Business {
 		this.businessName = businessName;
 	}
 
+	
 	public String getNeighborhoods() {
 		return neighborhoods;
 	}
@@ -96,6 +127,7 @@ public class Business {
 		this.neighborhoods = neighborhoods;
 	}
 
+	
 	public double getLatitude() {
 		return latitude;
 	}
@@ -104,6 +136,7 @@ public class Business {
 		this.latitude = latitude;
 	}
 
+	
 	public double getLongitude() {
 		return longitude;
 	}
@@ -112,6 +145,7 @@ public class Business {
 		this.longitude = longitude;
 	}
 
+	
 	public String getState() {
 		return state;
 	}
@@ -120,6 +154,7 @@ public class Business {
 		this.state = state;
 	}
 
+	
 	public double getStars() {
 		return stars;
 	}
@@ -128,6 +163,7 @@ public class Business {
 		this.stars = stars;
 	}
 
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

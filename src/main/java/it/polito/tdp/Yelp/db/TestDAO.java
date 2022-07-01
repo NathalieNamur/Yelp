@@ -8,6 +8,7 @@ import it.polito.tdp.Yelp.model.Business;
 public class TestDAO {
 
 	public static void main(String[] args) {
+		
 		YelpDAO dao = new YelpDAO();
 		List<Business> businesses = dao.readAllBusinesses();
 		System.out.println(businesses.size());
